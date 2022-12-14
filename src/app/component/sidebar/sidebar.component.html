@@ -1,0 +1,49 @@
+<!--font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Lobster&display=swap" rel="stylesheet">
+<!--Sidebar css starts-->
+<style>
+    mat-card{
+        width: 8cm;
+        margin-left: .6cm;
+    }
+    .container {
+        margin-right: auto;
+        margin-left: 9.5cm;
+        margin-top: -9cm;
+        text-align: center;
+        color: #00FFFF;
+    }
+</style>
+<!--Sidebar Css ends-->
+<!--Sidebar html starts-->
+<body bgcolor="#b22222" style="height: 18cm;">
+<br><br>
+<mat-card >
+    <mat-action-list>
+        <div mat-subheader>Rules:</div>
+        <div mat-subheader>
+          <ol>
+              <li>Correct Question gives you 10 points</li>
+              <li>Incorrect question gives to -2 points</li>
+              <li>You will have 60 sec to answer each question</li>
+              <li>Answering all questions is mandatory</li>
+          </ol>
+      </div>
+      
+    </mat-action-list>
+</mat-card><br><br>
+<mat-card>
+    <mat-action-list >
+        <div mat-subheader>Enter Your Name:</div>
+        <input #name type="text" class="form-control" style="margin-left: .4cm;"><br><br>
+        <button mat-raised-button color="primary" routerLink="/question" (click)="startQuiz()" style="margin-left: .4cm;">Start Quiz</button>
+    </mat-action-list>
+</mat-card>
+<br><br>
+<div class="container">
+    <br><p style="font-size: 2cm;font-family: lobster;">Welcome to JasperPortal...</p><br><br>
+    <br><p style="font-size: 2cm;font-family: lobster;">Hope You're Enjoying.</p>
+</div>
+<br>
+</body>
+<!--Sidebar Html ends-->

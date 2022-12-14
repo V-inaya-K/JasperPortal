@@ -1,0 +1,111 @@
+{
+    "questions": [{
+            "questionText": "Which of the following is the national bird of India?",
+            "options": [{
+                    "text": "Peacock",
+                    "correct": true
+                },
+                {
+                    "text": "Crow"
+                },
+                {
+                    "text": "Pigeon"
+                },
+                {
+                    "text": "Vulture"
+                }
+            ],
+            "explanation": "Peacock is the national bird of India."
+        },
+        {
+            "questionText": "A is the brother of B and C, D is C's mother. D is B's sister and E is B's sister. How is C related to E?",
+            "options": [{
+                    "text": "Niece"
+                },
+                {
+                    "text": "Mother"
+                },
+                {
+                    "text": "Cousin"
+                },
+                {
+                    "text": "Aunt",
+                    "correct": true
+                }
+            ],
+            "explanation": "C is E's Aunt."
+        },
+        {
+            "questionText": "Which of the following is synonymfor word 'Nostalgic' ?",
+            "options": [{
+                    "text": "Realistic"
+                },
+                {
+                    "text": "Sentimental",
+                    "correct": true
+                },
+                {
+                    "text": "Unsentimental"
+                },
+                {
+                    "text": "Feelings"
+                }
+            ],
+            "explanation": "Synonym for word 'Nostalgic' is Sentimental."
+        },
+        {
+            "questionText": "Arrange the following words according to English Dictionary? 1.Episode ;2.Epistle ;3.Episcope ;4.Epigraph",
+            "options": [{
+                    "text": "1>2>4>3"
+                },
+                {
+                    "text": "4>3>2>1"
+                },
+                {
+                    "text": "4>3>1>2",
+                    "correct": true
+                },
+                {
+                    "text": "3>2>4>1"
+                }
+            ],
+            "explanation": "Answer is C According to dictionary."
+        },
+        {
+            "questionText": "Hang ____! I'll be there with you an hour.What can used in the blank ?",
+            "options": [{
+                    "text": "in there",
+                    "correct": true
+                },
+                {
+                    "text": "more"
+                },
+                {
+                    "text": "a little"
+                },
+                {
+                    "text": "down here"
+                }
+            ],
+            "explanation": "Use the idiom' Hang in there' to encourage somebody in a difficult situation."
+        },
+        {
+            "questionText": "Which City hosts India International Trade Fair In November every year ?",
+            "options": [{
+                    "text": "Mumbai"
+                },
+                {
+                    "text": "Kolkata"
+                },
+                {
+                    "text": "Ludhiana"
+                },
+                {
+                    "text": "Delhi",
+                    "correct": true
+                }
+            ],
+            "explanation": "Delhi hosts India International Trade Fair In November every year."
+        }
+    ]
+}

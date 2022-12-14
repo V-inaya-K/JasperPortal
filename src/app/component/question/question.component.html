@@ -1,0 +1,74 @@
+<!--Question Html starts-->
+<body>
+<br>
+<mat-card>
+    <div class="container">
+        <div class="card">
+            <div class="d-flex justify-content-between p-3">
+                
+                <div class="quiz-header">
+                    <h4 style="font-family: cursive;">General Knowledge and Reasoning Quiz..</h4>
+                    <span style="font-style: italic;">Welcome {{name}} 😊❤️</span>
+                </div>
+            </div>
+            <ng-container *ngIf="!isQuizCompleted">
+                <div class="d-flex justify-content-around py-3">
+                    <div class="score">
+                        <h5>{{points}} Points</h5>
+                    </div>
+                    <div class="question-remain">
+                        <span style="font-style: italic;">Question &#9658; {{currentQuestion+1}} of {{questionList.length}}</span>
+                    </div>
+                    <div class="timer">
+                        <h5>{{counter}} sec ⏱</h5>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="question">
+                    <div class="card">
+                        <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+                    </div>
+                </div>
+                <div class="options">
+                    <ol *ngFor="let option of questionList[currentQuestion]?.options">
+                        <li (click)="answer(currentQuestion+1,option)">
+                            <div class="card">
+                                {{option.text}}
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <button [disabled]="currentQuestion===0" mat-raised-button color="primary" (click)="previousQuestion()">Previous</button>
+                <button mat-raised-button color="primary" (click)="resetQuiz()" style="margin-left: .4cm;">Reset</button>
+                <button mat-raised-button color="primary" (click)="nextQuestion()" style="margin-left: .4cm;">Next</button>
+                
+            </ng-container>
+    
+            <ng-container *ngIf="isQuizCompleted">
+                <div class="row d-flex justify-content-between">
+                    <img style="width: 50%;"  src="https://th.bing.com/th/id/R.9694fe362fefa21909a72e032201b82c?rik=mmWgWWoZyJGVnA&riu=http%3a%2f%2fallpicts.in%2fwp-content%2fuploads%2f2017%2f06%2fCongratulations-Pictures-Free-Download-for-Kids.jpg&ehk=QEwlLyFtL%2f6SRBTcoDZCBiOFO4Rf0eW9CLXbdK9A0dQ%3d&risl=&pid=ImgRaw&r=0">
+                    <div class="result text-center col-md-6 col-sm-12">
+                        <h3>Congratulations😍😍 <br>You Have successfully completed the quiz 👏👏</h3>
+                        <p>Total Question Attempted => {{questionList.length}} </p>
+                        <span>Total Question Attempted => &#8658; {{questionList.length}} </span>
+                        <p>Total Correct Answers => {{correctAnswer}} </p>
+                        <p>Total Wrong Answers => {{inCorrectAnswer}} </p>
+                        <p>You Scored => {{points}} Points </p>
+                    </div>
+                </div>
+            </ng-container>
+    
+        </div>
+    </div>
+</mat-card>
+</body>
+<!--Question Html Ends-->
+<!--Footer starts-->
+<div class="footer">
+    <div class="footer-bottom">
+        <app-footer></app-footer>
+    </div>
+</div>
+<!--Footer ends-->
