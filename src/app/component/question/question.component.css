@@ -6,6 +6,9 @@ mat-card{
     margin-right: auto;
     
 }
+button:hover{
+    background-color: rgb(3, 125, 125);
+}
 .card {
     width: 22cm;
     margin: 0 auto;
