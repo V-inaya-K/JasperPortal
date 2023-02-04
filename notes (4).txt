@@ -1,0 +1,490 @@
+Community Link - https://community.simplilearn.com/threads/phase-2-create-websites-using-front-and-back-end-frameworks-oct-8-nov-5-nisha-waikar.77237/
+
+Front end technologies
+    HTML - creates static pages 
+    CSS
+    Javascript - adds dynamic effects to static HTML pages 
+    Angular
+    React JS 
+
+    M - Mongo DB - backend
+    E 
+    A - Angular - front end
+    N 
+
+    Angular is Javascript framework
+
+    To specify the business logic of Angular Typescript is used
+
+    Typescript is Javascript
+
+    vanilla Javascript - Basic Javascript
+    EchmaScript (ES6) -  Basic Javascript + Object Oriented Programming
+    TypeScript - Basic Javascript + Object Oriented Programming + Type safty
+
+    TypeScript is used to specify logic of Angular components
+
+    Typescript :
+        is strongly typed 
+        object oriented 
+        compiled 
+
+        .ts ---> compiler ---> .js 
+
+        To work with typescript, installation is required. 
+        Node js needs to be installed to have typescript installation done
+
+        1. Install Node - https://nodejs.org/en/download/
+        2. Check on the command prompt if node is installed properly node -v
+        3. Install typescript using command - npm install -g typescript
+        4. Develop a code with .ts extension
+        5. compile the file as tsc fileName.ts
+        6. after successful compilation fileName.js file is created
+        7. execute this .js file using the command node fileName.js
+        tsc test1.ts &&  node test1.js
+        install ts-node command - npm install -g ts-node
+
+
+Variables
+    named memory that is assigned to store data(value)
+    identifier is name of the Variable
+    rules for identifier:
+        1. can have characters as well as digits.However identifier can not begin
+           with a digit
+        2. can not have special symbols except underscore(_) & dollar sign($)
+        3. can not be keywords
+        4. are case sensitive
+        5. can not contain spaces
+
+        Valid identifiers:
+            firstName
+            first_name
+            $total
+            _calculateTotal
+
+        Invalid identifiers:
+            1stName
+            var 
+            private
+            if
+            first name     
+
+    Data types are supported by Typescript
+        Number - number - hold both integers & floating point number  
+        String - string - holds alphanumeric data
+        Boolean- boolean - true false
+        Void   - void   - used to specify that the function does not return any value
+        Null   - null   - the object value
+        Undefined - undefined - value given to all non initialized variables
+
+    a variable has identifier & data type
+
+    syntax : 
+        var identifier : data type;  // only declaration
+        identifier = value;
+        var first_name : string;
+        first_name = "Nisha";
+
+        var identifier; // variable is declared but type is not specified the date type is any
+        var first_name;
+        first_name = "Nisha"
+        
+        var identifier : data type = value
+        var first_name : string = "Nisha"
+
+
+Functions
+    a building block that has reusable code which performs a specific task
+    instead of rewriting the code reuse the code
+
+    define a function
+        syntax :
+            function function_name(){
+                // function body
+            }
+    invoke a function
+        syntax :
+            function_name()
+
+    returning function
+        syntax :
+            function function_name() : return_type{
+                // function body
+                return value
+            }
+
+    parameterized function
+        syntax :
+            function function_name(param[s]) : return_type{
+                // function body
+                return value
+            }
+
+Object Oriented Programming
+    Encapsulation
+        encapsulating data and associated functions together
+        adds data hiding and security
+        implemented by creating Classes
+        a class is a module that has variables and associated functions put together
+    Abstraction
+        hiding the details and publishing only required features to end user
+    Inheritance
+        kind of / is a relationship
+        when one entity is kind of another entity 
+        reusablity
+
+        calculator + - * / % =
+        sci calc   
+
+    Polymorphism
+        one entity is available in multiple forms at the same time
+Classes
+    the way to implement Encapsulation
+    data members and associated functions put together in a single entity
+    blueprint of object
+
+Objects
+    instance of class 
+    state - values stored in variables for that object
+    identity - name of object
+    behavior - operations that can be performed using the object
+
+Class:
+    syntax : 
+        class ClassName{
+            // fields / properties
+            // constructor
+            // functions
+        }
+
+     constructor is a special function that is invoked at the time of 
+     object creation . This is used to initialize data members at the
+     time of object creation 
+
+Interface:
+    defines properties, methods as members and these are the standards to
+    be followed by the classes in that application
+
+    syntax : 
+        interface InterfaceName{
+            properties
+            methods
+        }     
+
+Inheritance :
+    is a relationship to be implemented
+
+    class ChildClass extends ParentClass{
+
+    }
+
+    single Inheritance
+    multilevel Inheritance
+
+
+Data hiding
+    need to control the visibility of data members
+    to achieve this we can make use of access specifiers
+
+    private :   accessible only within the class
+    protected : accessible within the class & to subclass only
+    public :    accessible to all entities
+
+    to access private data members we can use setter & getter methods
+
+tsc --target es6 Student.ts
+
+Angular :
+    What is Angular?
+        Javascript based Framework 
+        open source
+        MVC - Model View COntroller based
+    Why we need Angular?
+        Front end development
+        develop interactive user interface
+        SPA - Single Page Applications
+    How to use Angular?
+        create reusable components, services, directives, pipes etc 
+
+prerequisites :
+    HTML Javascript, CSS, Typescript
+
+Installation :
+    1. Node js installation
+    2. install angular using command as
+        npm install -g @angular/cli   
+    3. to confirm the angular installation execute command ng version
+    4. Create angular project using command as
+            ng new <project name>
+            e.g. ng new myangularproject
+    5. navigate to project using cd <projectname>
+    6. start the application ng serve        
+^ ^3.9.2 - 3.*.* - backward compatibility, old features are deprecated, bug fix
+~ ~3.9.2 - 3.9.* - bug fix
+
+Component:
+    reusable entity that has a business logic 
+    how to create a component:
+        ng g c <component name>
+
+Relation ships in components
+    1. parent child relationship
+    2. siblings
+
+M - Model - Business logic - .ts file
+V - View  - displayed to user - .html file
+C - Controller - middleware between M & V - app component      
+
+Data Binding
+    transferring the data within the component either from .html file to
+    .ts file or from .ts file to .html file
+
+there are 4 ways 2 achieve this
+    1. Interpolation
+         data flows from .ts file to .html file
+         when the variables declared or available in components .ts file need to be displayed
+         in HTML file, Interpolation is used.
+         syntax : {{ }}
+         this one way data binding
+         expression must result in a string 
+    2. Property Binding
+        this one way data binding
+        data flows from .ts file to .html file
+        the value of the variables can be set to the attributes of HTML tags 
+        syntax : <element [attribute] = variable>
+    3. Event Binding 
+        this one way data binding
+        from .html to .ts
+        event is any acition that is performed by user
+        angular application reacts to the user event
+        a function to be executed when a certain event occurs
+        angular supports all the events from javascript 
+        differs in syntax
+        onClick ----> (click)
+    4. Two way data Binding
+         this is two way data binding
+         from .html to .ts & from .ts to .html
+         it uses ngModel directive for assigning value of control(in html file) to the variable
+         (in ts file)
+         for using ngModel, FormsModule need to be imported in app.module.ts as this direcive 
+         is not available in default module
+
+Nesting of components
+    Parent child relationship
+
+
+Angular Component Life Cycle
+1. Constructor : Gets invoked at the time of component instantiation
+2. ngOnChanges : Gets invoked when any input output binding is changed
+3. ngOnInit : After first ngOnChanges invocation
+4. ngDoCheck : Gets invoked on any custom change
+5. ngAfterContentInit : Gets invoked after component contents are initialized
+6. ngAfterContentChecked : Gets invoked after every check of component content
+7. ngAfterViewInit : Gets invoked after components's views are initialized
+8. ngAfterViewChecked : Gets invoked after every check of component's views
+9. ngOnDestroy : Gets onvoked just before component is destroyed
+
+
+Component level communication
+1. Parent to child : using @Input decorator
+        a. create a data variable in parent component
+        b. specify the child cmp selector in parent's HTML file and bind the property 
+
+2. Child to Parent : using @Output decorator & EventEmitter
+        a. declare a variable in child component
+        b. create a custom event in child using EventEmitter
+        c. Create an event handler in child component to emit data
+        d. Declare a variable in parent component to hold the data from child
+        e. Create a method to accept data from child
+
+3. Data for unrelated components through a service 
+    Service is used to communicate with any external resource and make data available to 
+    application 
+    ng g service <servicename>
+
+Routing
+    links will be created
+    the component associated with a particular link will be loaded 
+    in current page 
+
+
+
+
+
+Forms    
+    used to develop the UI that is interactive.
+    used to gather information from the user.
+    e.g. login information, registration information 
+    2 typs of forms available
+    1. Template driven
+            The form design and validation is done in template i.e. HTML page only
+            the form controls are bound with variables by using ngModel
+            to make ngModel available in forms import FormsModule in app.module.ts file
+
+    2. Reactive or Model driven
+            The form design will be in HTMl page however the validations will be set in
+            .ts file 
+            most of the work will be done in .ts file
+            to use reactive forms import ReactiveFormsModule in app.module.ts
+            there are certain classes that are required to bind form controls with variables
+
+PWA - Progressive Web Application 
+that is delivered through web and built using HTML, CSS & Javascript
+provides high level user experience
+uses the services worker browser API to provide access to native features.
+
+What is a service worker in angular?
+A service worker is a script written in javascript that allows intercepting and control of 
+network requests and asset caching from the web browser. With service workers, web developers 
+can create reliably fast web pages and offline experiences. It’s a browser feature but it 
+doesn't have access to the DOM, its role is different than a normal JS script.
+
+As service Workers have access to manage network requests, they can be very powerful, 
+especially if used maliciously by an attacker, allowing things like script injection or 
+replacing the whole site. This is why HTTPS is so important here, in order to prevent 
+third parties from injecting them into your website.
+
+Responsive : executes on all devices 
+Auto updated : service worker keeps it updated all the time
+Secure : served through HTTPS 
+Reliable : offline execution
+
+1. Create a folder
+2. install angular using a commanf npm install -g @angular/cli
+3. Create a project as ng new angular-pwa
+4. cd angular-pwa & execute command as ng serve
+5. add Angular Material library to application using command as
+        ng add @angular/material
+6. select Indigo/Pink     
+7. Create a service to fetch data from API
+8. Create component to display data using angular material predeifned
+components
+
+Service worker
+    a service worker is a script that works in background
+    gets along with every modern browser.
+
+    works with HTTPS
+    PWA considers service worker as primary technology
+
+    when we have added angular pwa by using command 
+        ng add angular pwa
+    it has created a configuration file as ngsw-config.json
+    this file is responsible for service workers     
+
+Pipes in Angular    
+    formatting 
+    text
+    numbers 
+    decimals
+    date
+    currency
+
+    Predefined pipes 
+        date
+        Uppercase
+        lowercase
+        currency
+        decimal
+        percent
+
+directive : 
+    reusable entity with predefined functionality
+    works as an attribute       
+
+    ngFor : used for iterating over a collection
+    ngIf :  evaluate a condition and based on the result further 
+            action will be taken
+    ngSwitch : switch condition 
+
+Node js 
+    Node js is Javascript based platform built on Google Chrome's Javascript V8 Engine
+    a server side platform 
+    open source
+    cross platform runtime environment for developing server side Applications
+
+    node.js = Javascript Library + Runtime environment
+
+features :
+    1. Asynchronous & event driven 
+    2. very fast
+    3. No buffering
+
+NPM :
+    Node Package Manager 
+    2 main functionalities :
+    1. Online repository for node js packages / modules that are available by default
+    2. Commnad line utility to install node js packages, modules etc, managing versions, 
+       dependency management 
+
+    to check the version of npm the command is npm -v 
+
+    install modules using npm
+        npm install <MODULE NAME>
+
+    global and local installations
+
+    by default, npm installs any dependency in the local mode. Local mode means anythong that
+    needs to be available in node_modules folder i.e. for a specific project
+    locally deployed packages are available by using require() method.   
+
+    Globally installed packages / modules are stored in system directory.
+
+    to install any dependency globally the command used in 
+        npm install <MODULE NAME> -g
+
+npm init
+
+uninstall :   
+    npm uninstall <MODULE NAME> : Uninstalls the dependency locally 
+    npm uninstall <MODULE NAME> -g : uninstall the dependency globally
+
+    Find out how to search a module using npm.
+
+File system in node js     
+    a file will be used to preserve data that canbe referred in future
+    read data from file
+    write data in file
+    node js provides a module that allows to perform read write operations for files 
+    the module name is fs
+
+    file can be read and written in both synchronous and asynchronous manners
+    synchronous method is code blocking method
+    asynchronous method has a callback function that is executed on completion of given method 
+
+Open a file :
+    fs.open(path, flags[,mode], callback)  
+    path - a string that specifies path for the file
+    flags - behavior of file to be opened
+    mode - file mode in which it will be open
+    callback - callback function with 2 parameters as error and data
+
+    r - open a file for reading
+    r+ - open a file in read as well as write mode
+    rs - open a file for reading in synchronous mode
+    w - open file for writing 
+    w+ - open a file in read as well as write mode
+    a - open a file for appending
+    a+ - open a file for reading and appending
+
+Get file information
+    when it is required to get th einformatn about a file programatically
+     stat method is used to check the status of the file
+
+     fs.stat(path, callback)
+
+     path - string of file name 
+     callback - callback function
+
+stats.isFile()
+stats.isDirectory()
+
+Handling user input
+    need to accept input from the user. 
+
+    readline-sync is a module that is used for accepting input from user.
+    this is done in a synchronous way
+
+    how to install the module 
+
+    npm install readline-sync
